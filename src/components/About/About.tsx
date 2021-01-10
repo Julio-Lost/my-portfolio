@@ -1,16 +1,12 @@
 import * as S from "./styles";
+import me from "../../assets/me.jpg";
+import { Colors } from "../../constants";
 
 import Typography from "@material-ui/core/Typography";
-
+import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
-
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
 
 const useStyles = makeStyles((theme) => ({
   overlay: {
@@ -45,24 +41,47 @@ export const About = () => {
 
   return (
     <S.CustomDiv>
-      <div className={classes.overlay} />
+      <div />
       <Grid container>
+        <Grid item md={6}>
+          <div>
+            <img
+              src={me}
+              width="150"
+              height="150"
+              alt="me"
+              style={{ borderRadius: 150, margin: 30 }}
+            />
+          </div>
+        </Grid>
         <Grid item md={6}>
           <div className={classes.mainFeaturedPostContent}>
             <Typography
-              component="h1"
-              variant="h3"
+              style={{ fontSize: 16, color: Colors.White, fontWeight: "bold" }}
               color="inherit"
-              gutterBottom
             >
-              {mainFeaturedPost.title}
+              Sobre mim
             </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
-              {mainFeaturedPost.description}
+            <Typography
+              style={{
+                fontSize: 11,
+                color: Colors.White,
+              }}
+              color="inherit"
+              paragraph
+            >
+              Meu nome é Julio Cesar de Medeiros, tenho 26 anos e moro
+              atualmente na cidade de Vila Velha - ES. Sou graduando em Análise
+              e Desenvolvimento de Sistemas pela Universidade de Vila Velha,
+              UVV/Vila Velha.
             </Typography>
-            <Link variant="subtitle1" href="#">
-              {mainFeaturedPost.linkText}
-            </Link>
+            <Typography
+              style={{ fontSize: 11, color: Colors.White }}
+              color="inherit"
+            >
+              Eu sou um dev procurando resolver problemas do mundo real. Tenho
+              paixão por aprender e compartilhar meu conhecimento com os outros.
+            </Typography>
           </div>
         </Grid>
       </Grid>
