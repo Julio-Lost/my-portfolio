@@ -15,3 +15,15 @@ export function BuscarEstadoDarkOuLight() {
     return false;
   }
 }
+
+export function IncrementarAnoDeExperiencia(anoInicial: number) {
+  const dataAtual = new Date();
+
+  const anoAtual = dataAtual.getFullYear();
+
+  if (anoAtual > anoInicial) {
+    return anoAtual - anoInicial;
+  } else {
+    return anoAtual / anoInicial;
+  }
+}

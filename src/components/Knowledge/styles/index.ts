@@ -11,3 +11,16 @@ export const CustomCard = styled(Card)<{ darkMode: boolean }>`
   background-color: ${(props) =>
     props.darkMode ? Colors.White : Colors.Foreground};
 `;
+
+export const CustomDivCard = styled.div`
+  display: flex;
+  padding: 30;
+  flex-direction: row;
+
+  @media (max-width: 514px) {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+`;

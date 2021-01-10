@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 const App = () => {
   const classes = useStyles();
-  const { dispatch, actions, state: darkMode } = useDarkModeContext();
+  const { dispatch, actions } = useDarkModeContext();
 
   const handleLightMode = () => {
     salvarEstadoDarkOuLight(true);
@@ -46,12 +46,12 @@ const App = () => {
     } else {
       dispatch({ type: DarkModeActions.LIGHT_MODE });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <S.MainContainer>
       <Toolbar
-        darkMode={darkMode.darkMode}
         handleLightMode={handleLightMode}
         handleDarkMode={handleDarkMode}
       />

@@ -10,14 +10,6 @@ import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
-  overlay: {
-    // position: "absolute",
-    // top: 0,
-    // bottom: 0,
-    // right: 0,
-    // left: 0,
-    // backgroundColor: "rgba(0,0,0,.3)",
-  },
   mainFeaturedPostContent: {
     position: "relative",
     padding: theme.spacing(3),
@@ -44,18 +36,12 @@ export const About = () => {
     <S.CustomDiv darkMode={darkMode.darkMode}>
       <div />
       <Grid container>
-        <Grid item md={6}>
-          <div>
-            <img
-              src={me}
-              width="150"
-              height="150"
-              alt="me"
-              style={{ borderRadius: 150, margin: 30 }}
-            />
-          </div>
+        <Grid item md={5}>
+          <S.CustomDivText>
+            <S.CustomImg src={me} alt="me" />
+          </S.CustomDivText>
         </Grid>
-        <Grid item md={6}>
+        <Grid item md={7}>
           <div className={classes.mainFeaturedPostContent}>
             <Typography
               style={{

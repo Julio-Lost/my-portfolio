@@ -14,19 +14,11 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     padding: theme.spacing(3),
     [theme.breakpoints.up("md")]: {
-      padding: theme.spacing(6),
+      padding: theme.spacing(12),
       paddingRight: 0,
     },
   },
 }));
-
-const mainFeaturedPost = {
-  title: "Title of a longer featured blog post",
-  description: "Olá, eu sou Julio Cesar de Medeiros.",
-  image: "https://source.unsplash.com/random",
-  imgText: "main image description",
-  linkText: "Continue reading…",
-};
 
 export const Introduction = () => {
   const classes = useStyles();
@@ -35,8 +27,8 @@ export const Introduction = () => {
   return (
     <S.CustomDiv darkMode={darkMode.darkMode}>
       <Grid container>
-        <Grid item md={6}>
-          <div className={classes.mainFeaturedPostContent}>
+        <Grid item md={6} lg={6}>
+          <S.CustomDivText>
             <Typography
               style={{
                 fontSize: 16,
@@ -86,11 +78,11 @@ export const Introduction = () => {
                 </Typography>
               </Button>
             </Link>
-          </div>
+          </S.CustomDivText>
         </Grid>
-        <Grid item md={6}>
+        <Grid item md={6} lg={6}>
           <div>
-            <img src={intro} width="300" height="300" alt="intro" />
+            <S.CustomImg src={intro} alt="intro" />
           </div>
         </Grid>
       </Grid>

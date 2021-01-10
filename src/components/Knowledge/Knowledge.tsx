@@ -8,69 +8,78 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { DiHtml5, DiJsBadge, DiCss3, DiReact, DiNodejs } from "react-icons/di";
-import { SiDotNet, SiDocker, SiMicrosoftsqlserver } from "react-icons/si";
+import {
+  SiDotNet,
+  SiDocker,
+  SiMicrosoftsqlserver,
+  SiTypescript,
+} from "react-icons/si";
+import { IncrementarAnoDeExperiencia } from "../../constants/functions";
 
-const expericencia = [
+const expericencia1 = [
   {
     linguagem: "HTML",
     icone: DiHtml5,
-    anosExperiencia: 3,
+    anosExperiencia: 2018,
     cor: "#dd4b25",
   },
   {
     linguagem: "JavaScript",
     icone: DiJsBadge,
-    anosExperiencia: 3,
+    anosExperiencia: 2018,
     cor: "#f7e018",
   },
   {
+    linguagem: "TypeScript",
+    icone: SiTypescript,
+    anosExperiencia: 2020,
+    cor: "#2f74c0",
+  },
+];
+
+const expericencia2 = [
+  {
     linguagem: "CSS",
     icone: DiCss3,
-    anosExperiencia: 3,
+    anosExperiencia: 2018,
     cor: "#254bdd",
   },
   {
     linguagem: "React \n React Native",
     icone: DiReact,
-    anosExperiencia: 1,
+    anosExperiencia: 2020,
     cor: "#5ed3f3",
   },
   {
     linguagem: "NodeJs",
     icone: DiNodejs,
-    anosExperiencia: 1,
+    anosExperiencia: 2020,
     cor: "#333333",
   },
+];
+
+const experiencia3 = [
   {
     linguagem: ".Net",
     icone: SiDotNet,
-    anosExperiencia: 1,
+    anosExperiencia: 2020,
     cor: "#512bd4",
   },
   {
     linguagem: "Docker",
     icone: SiDocker,
-    anosExperiencia: 1,
+    anosExperiencia: 2020,
     cor: "#2391e6",
   },
   {
     linguagem: "SQL",
     icone: SiMicrosoftsqlserver,
-    anosExperiencia: 1,
+    anosExperiencia: 2020,
     cor: "#a4191c",
   },
 ];
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 300,
-    maxHeight: 500,
-    backgroundColor: Colors.White,
-  },
-});
-
 export const Knowledge = () => {
-  const classes = useStyles();
   const { state: darkMode } = useDarkModeContext();
 
   return (
@@ -108,45 +117,141 @@ export const Knowledge = () => {
           justifySelf: "center",
           justifyItems: "center",
           alignSelf: "center",
-          padding: 30,
-          flexDirection: "row",
+          flexDirection: "column",
         }}
       >
-        {expericencia.map((item) => (
-          <S.CustomCard
-            darkMode={darkMode.darkMode}
-            style={{ margin: 8, minHeight: 150, minWidth: 150 }}
-          >
-            <CardContent style={{ textAlign: "center" }}>
-              <item.icone
-                style={{
-                  fontSize: 40,
-                }}
-                color={item.cor}
-              />
-              <Typography
-                style={{
-                  fontSize: 18,
-                  fontWeight: "bold",
-                  color: Colors.Black,
-                  whiteSpace: "pre-line",
-                }}
-              >
-                {item.linguagem}
-              </Typography>
-              {/* <Typography
-                style={{
-                  fontSize: 11,
-                  color: Colors.Black,
-                }}
-                color="inherit"
-                paragraph
-              >
-                {`${item.anosExperiencia} anos de experiência`}
-              </Typography> */}
-            </CardContent>
-          </S.CustomCard>
-        ))}
+        <S.CustomDivCard>
+          {expericencia1.map((item, index) => (
+            <S.CustomCard
+              darkMode={darkMode.darkMode}
+              style={{
+                margin: 8,
+                minHeight: 150,
+                minWidth: 150,
+                maxHeight: 150,
+              }}
+              key={index}
+            >
+              <CardContent style={{ textAlign: "center" }}>
+                <item.icone
+                  style={{
+                    fontSize: 40,
+                  }}
+                  color={item.cor}
+                />
+                <Typography
+                  style={{
+                    fontSize: 16,
+                    fontWeight: "bold",
+                    color: Colors.Black,
+                    whiteSpace: "pre-line",
+                  }}
+                >
+                  {item.linguagem}
+                </Typography>
+                <Typography
+                  style={{
+                    fontSize: 11,
+                    color: Colors.Black,
+                  }}
+                  color="inherit"
+                >
+                  {`${IncrementarAnoDeExperiencia(
+                    item.anosExperiencia
+                  )} anos de experiência`}
+                </Typography>
+              </CardContent>
+            </S.CustomCard>
+          ))}
+        </S.CustomDivCard>
+        <S.CustomDivCard>
+          {expericencia2.map((item, index) => (
+            <S.CustomCard
+              darkMode={darkMode.darkMode}
+              style={{
+                margin: 8,
+                minHeight: 150,
+                minWidth: 150,
+                maxHeight: 150,
+              }}
+              key={index}
+            >
+              <CardContent style={{ textAlign: "center" }}>
+                <item.icone
+                  style={{
+                    fontSize: 40,
+                  }}
+                  color={item.cor}
+                />
+                <Typography
+                  style={{
+                    fontSize: 16,
+                    fontWeight: "bold",
+                    color: Colors.Black,
+                    whiteSpace: "pre-line",
+                  }}
+                >
+                  {item.linguagem}
+                </Typography>
+                <Typography
+                  style={{
+                    fontSize: 11,
+                    color: Colors.Black,
+                  }}
+                  color="inherit"
+                >
+                  {`${IncrementarAnoDeExperiencia(
+                    item.anosExperiencia
+                  )} anos de experiência`}
+                </Typography>
+              </CardContent>
+            </S.CustomCard>
+          ))}
+        </S.CustomDivCard>
+        <S.CustomDivCard>
+          {experiencia3.map((item, index) => (
+            <S.CustomCard
+              darkMode={darkMode.darkMode}
+              style={{
+                margin: 8,
+                minHeight: 150,
+                minWidth: 150,
+                maxHeight: 150,
+              }}
+              key={index}
+            >
+              <CardContent style={{ textAlign: "center" }}>
+                <item.icone
+                  style={{
+                    fontSize: 40,
+                  }}
+                  color={item.cor}
+                />
+                <Typography
+                  style={{
+                    fontSize: 16,
+                    fontWeight: "bold",
+                    color: Colors.Black,
+                    whiteSpace: "pre-line",
+                  }}
+                >
+                  {item.linguagem}
+                </Typography>
+                <Typography
+                  style={{
+                    fontSize: 11,
+                    color: Colors.Black,
+                  }}
+                  color="inherit"
+                >
+                  {`${IncrementarAnoDeExperiencia(
+                    item.anosExperiencia
+                  )} anos de experiência`}
+                </Typography>
+              </CardContent>
+            </S.CustomCard>
+          ))}
+        </S.CustomDivCard>
       </div>
     </S.CustomDiv>
   );
