@@ -4,12 +4,10 @@ import Card from "@material-ui/core/Card";
 
 export const CustomDiv = styled.div<{ darkMode: boolean }>`
   background-color: ${(props) =>
-    props.darkMode ? Colors.CurrentLine : Colors.White};
+    props.darkMode ? Colors.Selection : Colors.White};
 `;
 
 export const CustomCard = styled(Card)<{ darkMode: boolean }>`
   background-color: ${(props) =>
-    props.darkMode ? Colors.Purple : Colors.NewWhite};
-  max-width: 300;
-  max-height: 500;
+    props.darkMode ? Colors.White : Colors.Foreground};
 `;

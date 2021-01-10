@@ -1,6 +1,7 @@
 import * as S from "./styles";
 import me from "../../assets/me.jpg";
 import { Colors } from "../../constants";
+import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
 
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -38,9 +39,9 @@ const mainFeaturedPost = {
 
 export const About = () => {
   const classes = useStyles();
-
+  const { state: darkMode } = useDarkModeContext();
   return (
-    <S.CustomDiv>
+    <S.CustomDiv darkMode={darkMode.darkMode}>
       <div />
       <Grid container>
         <Grid item md={6}>
@@ -57,7 +58,11 @@ export const About = () => {
         <Grid item md={6}>
           <div className={classes.mainFeaturedPostContent}>
             <Typography
-              style={{ fontSize: 16, color: Colors.White, fontWeight: "bold" }}
+              style={{
+                fontSize: 16,
+                color: darkMode.darkMode ? Colors.White : Colors.Black,
+                fontWeight: "bold",
+              }}
               color="inherit"
             >
               Sobre mim
@@ -65,7 +70,7 @@ export const About = () => {
             <Typography
               style={{
                 fontSize: 11,
-                color: Colors.White,
+                color: darkMode.darkMode ? Colors.White : Colors.Black,
               }}
               color="inherit"
               paragraph
@@ -76,7 +81,10 @@ export const About = () => {
               UVV/Vila Velha.
             </Typography>
             <Typography
-              style={{ fontSize: 11, color: Colors.White }}
+              style={{
+                fontSize: 11,
+                color: darkMode.darkMode ? Colors.White : Colors.Black,
+              }}
               color="inherit"
             >
               Eu sou um dev procurando resolver problemas do mundo real. Tenho

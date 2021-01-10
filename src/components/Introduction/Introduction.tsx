@@ -1,6 +1,7 @@
 import * as S from "./styles";
 import intro from "../../assets/intro.png";
 import { Colors } from "../../constants";
+import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
 
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -29,15 +30,18 @@ const mainFeaturedPost = {
 
 export const Introduction = () => {
   const classes = useStyles();
+  const { state: darkMode } = useDarkModeContext();
 
   return (
-    <S.CustomDiv>
-      <div />
+    <S.CustomDiv darkMode={darkMode.darkMode}>
       <Grid container>
         <Grid item md={6}>
           <div className={classes.mainFeaturedPostContent}>
             <Typography
-              style={{ fontSize: 16, color: Colors.White }}
+              style={{
+                fontSize: 16,
+                color: darkMode.darkMode ? Colors.White : Colors.Black,
+              }}
               color="inherit"
             >
               Olá, eu sou
@@ -46,7 +50,7 @@ export const Introduction = () => {
               style={{
                 fontSize: 18,
                 fontWeight: "bold",
-                color: Colors.White,
+                color: darkMode.darkMode ? Colors.White : Colors.Black,
                 paddingLeft: 4,
               }}
               color="inherit"
@@ -54,7 +58,10 @@ export const Introduction = () => {
               Julio Cesar de Medeiros.
             </Typography>
             <Typography
-              style={{ fontSize: 16, color: Colors.White }}
+              style={{
+                fontSize: 16,
+                color: darkMode.darkMode ? Colors.White : Colors.Black,
+              }}
               color="inherit"
             >
               Desenvolvedor

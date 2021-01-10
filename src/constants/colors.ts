@@ -1,5 +1,5 @@
 export const Colors = {
-  background: "#282a36",
+  Background: "#282a36",
   CurrentLine: "#44475a",
   Selection: "#44475a",
   Foreground: "#f8f8f2",
@@ -13,4 +13,6 @@ export const Colors = {
   Yellow: "#f1fa8c",
   White: "#fff",
   NewPurple: "#383a59",
+  Black: "#000",
+  NewWhite: "#f2f2f2",
 };

@@ -4,9 +4,10 @@ import Typography from "@material-ui/core/Typography";
 import * as S from "./styles";
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
 import { Colors } from "../../constants";
+import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
 
 interface IToolbarProps {
-  lightMode: boolean;
+  darkMode: boolean;
   handleLightMode: () => void;
   handleDarkMode: () => void;
 }
@@ -38,16 +39,17 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export const Toolbar = (props: IToolbarProps) => {
   const classes = useStyles();
+  const { state: darkMode } = useDarkModeContext();
 
   return (
     <AppBar position="static">
-      <S.CustomToolbar>
+      <S.CustomToolbar darkMode={darkMode.darkMode}>
         <Typography
           className={classes.title}
           style={{
             fontSize: 16,
             fontWeight: "bold",
-            color: Colors.White,
+            color: props.darkMode ? Colors.White : Colors.Black,
             cursor: "pointer",
           }}
           noWrap
@@ -60,7 +62,7 @@ export const Toolbar = (props: IToolbarProps) => {
             style={{
               fontSize: 16,
               fontWeight: "bold",
-              color: Colors.White,
+              color: props.darkMode ? Colors.White : Colors.Black,
               cursor: "pointer",
             }}
             noWrap
@@ -74,7 +76,7 @@ export const Toolbar = (props: IToolbarProps) => {
             style={{
               fontSize: 16,
               fontWeight: "bold",
-              color: Colors.White,
+              color: props.darkMode ? Colors.White : Colors.Black,
               cursor: "pointer",
             }}
             noWrap
@@ -88,7 +90,7 @@ export const Toolbar = (props: IToolbarProps) => {
             style={{
               fontSize: 16,
               fontWeight: "bold",
-              color: Colors.White,
+              color: props.darkMode ? Colors.White : Colors.Black,
               cursor: "pointer",
             }}
             noWrap
@@ -102,7 +104,7 @@ export const Toolbar = (props: IToolbarProps) => {
             style={{
               fontSize: 16,
               fontWeight: "bold",
-              color: Colors.White,
+              color: props.darkMode ? Colors.White : Colors.Black,
               cursor: "pointer",
             }}
             noWrap
@@ -111,10 +113,10 @@ export const Toolbar = (props: IToolbarProps) => {
           </Typography>
         </div>
         <div className={classes.toolbarText} style={{ marginTop: 3 }}>
-          {props.lightMode ? (
-            <IoMdSunny onClick={props.handleDarkMode} />
+          {props.darkMode ? (
+            <IoMdMoon onClick={props.handleDarkMode} />
           ) : (
-            <IoMdMoon onClick={props.handleLightMode} />
+            <IoMdSunny onClick={props.handleLightMode} color={Colors.Black} />
           )}
         </div>
       </S.CustomToolbar>

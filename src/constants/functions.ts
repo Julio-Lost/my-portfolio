@@ -1,0 +1,17 @@
+export function salvarEstadoDarkOuLight(darkMode: boolean) {
+  if (darkMode) {
+    localStorage.setItem("darkMode", "dark");
+  } else {
+    localStorage.setItem("darkMode", "light");
+  }
+}
+
+export function BuscarEstadoDarkOuLight() {
+  const darkModeAtivo = localStorage.getItem("darkMode");
+
+  if (darkModeAtivo === "dark") {
+    return true;
+  } else {
+    return false;
+  }
+}
