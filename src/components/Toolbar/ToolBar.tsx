@@ -33,7 +33,7 @@ export const Toolbar = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="absolute">
+    <AppBar position="static">
       <S.CustomToolbar>
         <Typography className={classes.title} variant="h6" noWrap>
           Julio Cesar de Medeiros

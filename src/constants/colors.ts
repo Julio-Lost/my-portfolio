@@ -3,6 +3,7 @@ export const Colors = {
   CurrentLine: "#44475a",
   Selection: "#44475a",
   Foreground: "#f8f8f2",
+  Comment: "#6272a4",
   Cyan: "#8be9fd",
   Green: "#50fa7b",
   Orange: "#ffb86c",
@@ -11,4 +12,5 @@ export const Colors = {
   Red: "#ff5555",
   Yellow: "#f1fa8c",
   White: "#fff",
+  NewPurple: "#383a59",
 };
