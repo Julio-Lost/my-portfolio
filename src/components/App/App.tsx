@@ -1,5 +1,5 @@
 import Paper from "@material-ui/core/Paper";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import {
   BuscarEstadoDarkOuLight,
   salvarEstadoDarkOuLight,
@@ -14,10 +14,12 @@ import Projects from "../Projects/Projects";
 import Toolbar from "../Toolbar/ToolBar";
 import * as S from "./styles";
 
-import { scroller, animateScroll, Element } from "react-scroll";
-
 const App = () => {
   const { dispatch, actions } = useDarkModeContext();
+  const aboutRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  const knowledgeRef = useRef<HTMLDivElement | null>(null);
+  const footerRef = useRef<HTMLDivElement | null>(null);
 
   const handleLightMode = () => {
     salvarEstadoDarkOuLight(true);
@@ -40,20 +42,20 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleScrollAbout = () => {
-    scroller.scrollTo("About", { smooth: true });
+  const handleScrollToAbouRef = () => {
+    aboutRef.current!.scrollIntoView();
   };
 
-  const handleScrollProjects = () => {
-    scroller.scrollTo("Projects", { smooth: true });
+  const handleScrollToProjectsRef = () => {
+    projectsRef.current!.scrollIntoView();
   };
 
-  const handleScrollKnowLedge = () => {
-    scroller.scrollTo("KnowLedge", { smooth: true });
+  const handleScrollToKnowLedgeRef = () => {
+    knowledgeRef.current!.scrollIntoView();
   };
 
-  const handleScrollFooter = () => {
-    animateScroll.scrollToBottom();
+  const handleScrollToFooterRef = () => {
+    footerRef.current!.scrollIntoView();
   };
 
   return (
@@ -61,23 +63,25 @@ const App = () => {
       <Toolbar
         handleLightMode={handleLightMode}
         handleDarkMode={handleDarkMode}
-        handleScrollAbout={handleScrollAbout}
-        handleScrollProjects={handleScrollProjects}
-        handleScrollKnowLedge={handleScrollKnowLedge}
-        handleScrollFooter={handleScrollFooter}
+        handleScrollAbout={handleScrollToAbouRef}
+        handleScrollProjects={handleScrollToProjectsRef}
+        handleScrollKnowLedge={handleScrollToKnowLedgeRef}
+        handleScrollFooter={handleScrollToFooterRef}
       />
       <Paper>
         <Introduction />
-        <Element name="About">
+        <div ref={aboutRef}>
           <About />
-        </Element>
-        <Element name="Projects">
+        </div>
+        <div ref={projectsRef}>
           <Projects />
-        </Element>
-        <Element name="KnowLedge">
+        </div>
+        <div ref={knowledgeRef}>
           <Knowledge />
-        </Element>
-        <Footer />
+        </div>
+        <div ref={footerRef}>
+          <Footer />
+        </div>
       </Paper>
     </S.MainContainer>
   );
