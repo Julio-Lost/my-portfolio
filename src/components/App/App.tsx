@@ -6,7 +6,6 @@ import Projects from "../Projects/Projects";
 import Knowledge from "../Knowledge/Knowledge";
 import Footer from "../Footer/Footer";
 
-import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
 import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
@@ -17,15 +16,7 @@ import {
 } from "../../constants/functions";
 import { useEffect } from "react";
 
-const useStyles = makeStyles((theme) => ({
-  mainFeaturedPost: {
-    position: "relative",
-    marginBottom: theme.spacing(4),
-  },
-}));
-
 const App = () => {
-  const classes = useStyles();
   const { dispatch, actions } = useDarkModeContext();
 
   const handleLightMode = () => {
@@ -55,7 +46,7 @@ const App = () => {
         handleLightMode={handleLightMode}
         handleDarkMode={handleDarkMode}
       />
-      <Paper className={classes.mainFeaturedPost}>
+      <Paper>
         <Introduction />
         <About />
         <Projects />

@@ -1,50 +1,22 @@
-import AppBar from "@material-ui/core/AppBar";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import * as S from "./styles";
-import { IoMdMoon, IoMdSunny } from "react-icons/io";
 import { Colors } from "../../constants";
 import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
+
+import AppBar from "@material-ui/core/AppBar";
+import { IoMdMoon, IoMdSunny } from "react-icons/io";
 
 interface IToolbarProps {
   handleLightMode: () => void;
   handleDarkMode: () => void;
 }
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      flexGrow: 1,
-    },
-    title: {
-      flexGrow: 1,
-      display: "none",
-      [theme.breakpoints.up("sm")]: {
-        display: "block",
-      },
-    },
-    toolbarText: {
-      position: "relative",
-      cursor: "pointer",
-      marginLeft: 0,
-      width: "100%",
-      [theme.breakpoints.up("sm")]: {
-        marginLeft: theme.spacing(1),
-        width: "auto",
-      },
-    },
-  })
-);
-
 export const Toolbar = (props: IToolbarProps) => {
-  const classes = useStyles();
   const { state: darkMode } = useDarkModeContext();
 
   return (
     <AppBar position="static">
       <S.CustomToolbar darkMode={darkMode.darkMode}>
-        <Typography
-          className={classes.title}
+        <S.CustomTypography
           style={{
             fontSize: 16,
             fontWeight: "bold",
@@ -54,10 +26,9 @@ export const Toolbar = (props: IToolbarProps) => {
           noWrap
         >
           Julio Cesar de Medeiros
-        </Typography>
-        <div className={classes.toolbarText}>
-          <Typography
-            className={classes.title}
+        </S.CustomTypography>
+        <S.CustomToolbarText>
+          <S.CustomTypography
             style={{
               fontSize: 16,
               fontWeight: "bold",
@@ -67,11 +38,10 @@ export const Toolbar = (props: IToolbarProps) => {
             noWrap
           >
             Sobre
-          </Typography>
-        </div>
-        <div className={classes.toolbarText}>
-          <Typography
-            className={classes.title}
+          </S.CustomTypography>
+        </S.CustomToolbarText>
+        <S.CustomToolbarText>
+          <S.CustomTypography
             style={{
               fontSize: 16,
               fontWeight: "bold",
@@ -81,11 +51,10 @@ export const Toolbar = (props: IToolbarProps) => {
             noWrap
           >
             Projetos
-          </Typography>
-        </div>
-        <div className={classes.toolbarText}>
-          <Typography
-            className={classes.title}
+          </S.CustomTypography>
+        </S.CustomToolbarText>
+        <S.CustomToolbarText>
+          <S.CustomTypography
             style={{
               fontSize: 16,
               fontWeight: "bold",
@@ -95,11 +64,10 @@ export const Toolbar = (props: IToolbarProps) => {
             noWrap
           >
             Conhecimentos
-          </Typography>
-        </div>
-        <div className={classes.toolbarText}>
-          <Typography
-            className={classes.title}
+          </S.CustomTypography>
+        </S.CustomToolbarText>
+        <S.CustomToolbarText>
+          <S.CustomTypography
             style={{
               fontSize: 16,
               fontWeight: "bold",
@@ -109,15 +77,15 @@ export const Toolbar = (props: IToolbarProps) => {
             noWrap
           >
             Contatos
-          </Typography>
-        </div>
-        <div className={classes.toolbarText} style={{ marginTop: 3 }}>
+          </S.CustomTypography>
+        </S.CustomToolbarText>
+        <S.CustomToolbarText style={{ marginTop: 3 }}>
           {darkMode.darkMode ? (
             <IoMdMoon onClick={props.handleDarkMode} />
           ) : (
             <IoMdSunny onClick={props.handleLightMode} color={Colors.Black} />
           )}
-        </div>
+        </S.CustomToolbarText>
       </S.CustomToolbar>
     </AppBar>
   );

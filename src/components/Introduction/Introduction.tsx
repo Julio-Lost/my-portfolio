@@ -5,23 +5,10 @@ import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeCont
 
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
 
-const useStyles = makeStyles((theme) => ({
-  mainFeaturedPostContent: {
-    position: "relative",
-    padding: theme.spacing(3),
-    [theme.breakpoints.up("md")]: {
-      padding: theme.spacing(12),
-      paddingRight: 0,
-    },
-  },
-}));
-
 export const Introduction = () => {
-  const classes = useStyles();
   const { state: darkMode } = useDarkModeContext();
 
   return (

@@ -2,8 +2,6 @@ import * as S from "./styles";
 import { Colors } from "../../constants";
 import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
 
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
@@ -17,12 +15,7 @@ export const Projects = () => {
       <div
         style={{
           display: "flex",
-          alignItems: "center",
-          alignContent: "center",
           justifyContent: "center",
-          justifySelf: "center",
-          justifyItems: "center",
-          alignSelf: "center",
           padding: 30,
         }}
       >
@@ -40,12 +33,7 @@ export const Projects = () => {
       <div
         style={{
           display: "flex",
-          alignItems: "center",
-          alignContent: "center",
           justifyContent: "center",
-          justifySelf: "center",
-          justifyItems: "center",
-          alignSelf: "center",
           padding: 30,
         }}
       >
@@ -57,7 +45,7 @@ export const Projects = () => {
             <Typography
               style={{
                 fontSize: 11,
-                color: darkMode.darkMode ? Colors.White : Colors.Black,
+                color: Colors.Black,
               }}
               color="inherit"
               paragraph
@@ -68,12 +56,7 @@ export const Projects = () => {
             <CardContent
               style={{
                 display: "flex",
-                alignItems: "center",
-                alignContent: "center",
                 justifyContent: "center",
-                justifySelf: "center",
-                justifyItems: "center",
-                alignSelf: "center",
               }}
             >
               <Link href="https://github.com/Julio-Lost">

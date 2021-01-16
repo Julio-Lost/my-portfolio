@@ -23,3 +23,13 @@ export const CustomImg = styled.img`
     height: 150px;
   }
 `;
+
+export const CustomDivAboutMe = styled.div`
+  position: relative;
+  padding: 48px;
+
+  @media (max-width: 959.5px) {
+    padding: 24px;
+    padding-right: 0;
+  }
+`;

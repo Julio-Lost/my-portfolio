@@ -2,9 +2,6 @@ import * as S from "./styles";
 import { Colors } from "../../constants";
 import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
 
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { DiHtml5, DiJsBadge, DiCss3, DiReact, DiNodejs } from "react-icons/di";
@@ -88,11 +85,6 @@ export const Knowledge = () => {
         style={{
           display: "flex",
           alignItems: "center",
-          alignContent: "center",
-          justifyContent: "center",
-          justifySelf: "center",
-          justifyItems: "center",
-          alignSelf: "center",
           padding: 30,
           flexDirection: "column",
         }}
@@ -101,7 +93,7 @@ export const Knowledge = () => {
           style={{
             fontSize: 18,
             fontWeight: "bold",
-            color: Colors.White,
+            color: darkMode.darkMode ? Colors.White : Colors.Black,
             padding: 8,
           }}
         >
@@ -112,11 +104,6 @@ export const Knowledge = () => {
         style={{
           display: "flex",
           alignItems: "center",
-          alignContent: "center",
-          justifyContent: "center",
-          justifySelf: "center",
-          justifyItems: "center",
-          alignSelf: "center",
           flexDirection: "column",
         }}
       >
@@ -208,7 +195,7 @@ export const Knowledge = () => {
             </S.CustomCard>
           ))}
         </S.CustomDivCard>
-        <S.CustomDivCard>
+        <S.CustomDivCard className="rotate-center">
           {experiencia3.map((item, index) => (
             <S.CustomCard
               darkMode={darkMode.darkMode}

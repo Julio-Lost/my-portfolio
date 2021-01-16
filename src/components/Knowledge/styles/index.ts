@@ -1,6 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Colors } from "../../../constants";
 import Card from "@material-ui/core/Card";
+
+const rotateCenter = keyframes`
+from {transform: rotate(0)
+}
+to{
+  transform:rotate(360deg)
+  }
+`;
 
 export const CustomDiv = styled.div<{ darkMode: boolean }>`
   background-color: ${(props) =>
@@ -10,6 +18,11 @@ export const CustomDiv = styled.div<{ darkMode: boolean }>`
 export const CustomCard = styled(Card)<{ darkMode: boolean }>`
   background-color: ${(props) =>
     props.darkMode ? Colors.White : Colors.Foreground};
+
+  &:hover {
+    background-color: ${Colors.Comment};
+    animation: ${rotateCenter} 2s ease-in-out both;
+  }
 `;
 
 export const CustomDivCard = styled.div`
