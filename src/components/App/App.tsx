@@ -1,20 +1,20 @@
-import * as S from "./styles";
-import Toolbar from "../Toolbar/ToolBar";
-import Introduction from "../Introduction/Introduction";
-import About from "../About/About";
-import Projects from "../Projects/Projects";
-import Knowledge from "../Knowledge/Knowledge";
-import Footer from "../Footer/Footer";
-
 import Paper from "@material-ui/core/Paper";
-
-import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
-import { DarkModeActions } from "../../context/types/darkMode.types";
+import { useEffect } from "react";
 import {
   BuscarEstadoDarkOuLight,
   salvarEstadoDarkOuLight,
 } from "../../constants/functions";
-import { useEffect } from "react";
+import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
+import { DarkModeActions } from "../../context/types/darkMode.types";
+import About from "../About/About";
+import Footer from "../Footer/Footer";
+import Introduction from "../Introduction/Introduction";
+import Knowledge from "../Knowledge/Knowledge";
+import Projects from "../Projects/Projects";
+import Toolbar from "../Toolbar/ToolBar";
+import * as S from "./styles";
+
+import { scroller, animateScroll, Element } from "react-scroll";
 
 const App = () => {
   const { dispatch, actions } = useDarkModeContext();
@@ -40,17 +40,43 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleScrollAbout = () => {
+    scroller.scrollTo("About", { smooth: true });
+  };
+
+  const handleScrollProjects = () => {
+    scroller.scrollTo("Projects", { smooth: true });
+  };
+
+  const handleScrollKnowLedge = () => {
+    scroller.scrollTo("KnowLedge", { smooth: true });
+  };
+
+  const handleScrollFooter = () => {
+    animateScroll.scrollToBottom();
+  };
+
   return (
     <S.MainContainer>
       <Toolbar
         handleLightMode={handleLightMode}
         handleDarkMode={handleDarkMode}
+        handleScrollAbout={handleScrollAbout}
+        handleScrollProjects={handleScrollProjects}
+        handleScrollKnowLedge={handleScrollKnowLedge}
+        handleScrollFooter={handleScrollFooter}
       />
       <Paper>
         <Introduction />
-        <About />
-        <Projects />
-        <Knowledge />
+        <Element name="About">
+          <About />
+        </Element>
+        <Element name="Projects">
+          <Projects />
+        </Element>
+        <Element name="KnowLedge">
+          <Knowledge />
+        </Element>
         <Footer />
       </Paper>
     </S.MainContainer>

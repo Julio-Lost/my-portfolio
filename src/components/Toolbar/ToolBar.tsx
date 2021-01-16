@@ -8,6 +8,10 @@ import { IoMdMoon, IoMdSunny } from "react-icons/io";
 interface IToolbarProps {
   handleLightMode: () => void;
   handleDarkMode: () => void;
+  handleScrollAbout: () => void;
+  handleScrollProjects: () => void;
+  handleScrollKnowLedge: () => void;
+  handleScrollFooter: () => void;
 }
 
 export const Toolbar = (props: IToolbarProps) => {
@@ -21,7 +25,6 @@ export const Toolbar = (props: IToolbarProps) => {
             fontSize: 16,
             fontWeight: "bold",
             color: darkMode.darkMode ? Colors.White : Colors.Black,
-            cursor: "pointer",
           }}
           noWrap
         >
@@ -29,6 +32,7 @@ export const Toolbar = (props: IToolbarProps) => {
         </S.CustomTypography>
         <S.CustomToolbarText>
           <S.CustomTypography
+            onClick={props.handleScrollAbout}
             style={{
               fontSize: 16,
               fontWeight: "bold",
@@ -42,6 +46,7 @@ export const Toolbar = (props: IToolbarProps) => {
         </S.CustomToolbarText>
         <S.CustomToolbarText>
           <S.CustomTypography
+            onClick={props.handleScrollProjects}
             style={{
               fontSize: 16,
               fontWeight: "bold",
@@ -55,6 +60,7 @@ export const Toolbar = (props: IToolbarProps) => {
         </S.CustomToolbarText>
         <S.CustomToolbarText>
           <S.CustomTypography
+            onClick={props.handleScrollKnowLedge}
             style={{
               fontSize: 16,
               fontWeight: "bold",
@@ -68,6 +74,7 @@ export const Toolbar = (props: IToolbarProps) => {
         </S.CustomToolbarText>
         <S.CustomToolbarText>
           <S.CustomTypography
+            onClick={props.handleScrollFooter}
             style={{
               fontSize: 16,
               fontWeight: "bold",
