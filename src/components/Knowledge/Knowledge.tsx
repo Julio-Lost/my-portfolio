@@ -11,7 +11,10 @@ import {
   SiMicrosoftsqlserver,
   SiTypescript,
 } from "react-icons/si";
-import { IncrementarAnoDeExperiencia } from "../../constants/functions";
+import {
+  AjustarTextoDeExperiencia,
+  IncrementarAnoDeExperiencia,
+} from "../../constants/functions";
 
 const expericencia1 = [
   {
@@ -151,7 +154,9 @@ export const Knowledge = () => {
                 >
                   {`${IncrementarAnoDeExperiencia(
                     item.anosExperiencia
-                  )} anos de experiência`}
+                  )} ${AjustarTextoDeExperiencia(
+                    item.anosExperiencia
+                  )}  de experiência`}
                 </Typography>
               </CardContent>
             </S.CustomCard>
@@ -200,7 +205,9 @@ export const Knowledge = () => {
                 >
                   {`${IncrementarAnoDeExperiencia(
                     item.anosExperiencia
-                  )} anos de experiência`}
+                  )} ${AjustarTextoDeExperiencia(
+                    item.anosExperiencia
+                  )}  de experiência`}
                 </Typography>
               </CardContent>
             </S.CustomCard>
@@ -249,7 +256,9 @@ export const Knowledge = () => {
                 >
                   {`${IncrementarAnoDeExperiencia(
                     item.anosExperiencia
-                  )} anos de experiência`}
+                  )} ${AjustarTextoDeExperiencia(
+                    item.anosExperiencia
+                  )}  de experiência`}
                 </Typography>
               </CardContent>
             </S.CustomCard>

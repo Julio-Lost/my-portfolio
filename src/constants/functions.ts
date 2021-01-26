@@ -18,12 +18,22 @@ export function BuscarEstadoDarkOuLight() {
 
 export function IncrementarAnoDeExperiencia(anoInicial: number) {
   const dataAtual = new Date();
-
+  console.log(dataAtual);
   const anoAtual = dataAtual.getFullYear();
 
   if (anoAtual > anoInicial) {
     return anoAtual - anoInicial;
   } else {
     return anoAtual / anoInicial;
+  }
+}
+
+export function AjustarTextoDeExperiencia(anoInicial: number) {
+  const retornoExperiencia = IncrementarAnoDeExperiencia(anoInicial);
+
+  if (retornoExperiencia > 1) {
+    return "anos";
+  } else {
+    return "ano";
   }
 }

@@ -39,8 +39,8 @@ export const About = () => {
               paragraph
             >
               Meu nome é Julio Cesar de Medeiros, tenho {idade} anos e moro
-              atualmente na cidade de Vila Velha - ES. Sou graduando em Análise
-              e Desenvolvimento de Sistemas pela Universidade de Vila Velha,
+              atualmente na cidade de Vila Velha - ES. Estou cursando Análise e
+              Desenvolvimento de Sistemas pela Universidade de Vila Velha,
               UVV/Vila Velha.
             </Typography>
             <Typography

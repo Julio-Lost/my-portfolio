@@ -113,9 +113,9 @@ export const Toolbar = (props: IToolbarProps) => {
           </S.CustomToolbarText>
           <S.CustomToolbarText style={{ marginTop: 3 }}>
             {darkMode.darkMode ? (
-              <IoMdMoon onClick={props.handleDarkMode} />
+              <IoMdSunny onClick={props.handleDarkMode} />
             ) : (
-              <IoMdSunny onClick={props.handleLightMode} color={Colors.Black} />
+              <IoMdMoon onClick={props.handleLightMode} color={Colors.Black} />
             )}
           </S.CustomToolbarText>
         </S.ContainerBotoes>
