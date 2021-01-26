@@ -18,7 +18,6 @@ export function BuscarEstadoDarkOuLight() {
 
 export function IncrementarAnoDeExperiencia(anoInicial: number) {
   const dataAtual = new Date();
-  console.log(dataAtual);
   const anoAtual = dataAtual.getFullYear();
 
   if (anoAtual > anoInicial) {
