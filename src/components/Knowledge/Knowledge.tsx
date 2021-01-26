@@ -119,7 +119,7 @@ export const Knowledge = () => {
                 maxHeight: 150,
                 backgroundColor: darkMode.darkMode
                   ? Colors.White
-                  : Colors.Foreground,
+                  : Colors.NewWhite,
               }}
               key={index}
             >
@@ -168,7 +168,7 @@ export const Knowledge = () => {
                 maxHeight: 150,
                 backgroundColor: darkMode.darkMode
                   ? Colors.White
-                  : Colors.Foreground,
+                  : Colors.NewWhite,
               }}
               key={index}
             >
@@ -217,7 +217,7 @@ export const Knowledge = () => {
                 maxHeight: 150,
                 backgroundColor: darkMode.darkMode
                   ? Colors.White
-                  : Colors.Foreground,
+                  : Colors.NewWhite,
               }}
               key={index}
             >
