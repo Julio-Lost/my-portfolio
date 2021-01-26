@@ -117,6 +117,9 @@ export const Knowledge = () => {
                 minHeight: 150,
                 minWidth: 150,
                 maxHeight: 150,
+                backgroundColor: darkMode.darkMode
+                  ? Colors.White
+                  : Colors.Foreground,
               }}
               key={index}
             >
@@ -163,6 +166,9 @@ export const Knowledge = () => {
                 minHeight: 150,
                 minWidth: 150,
                 maxHeight: 150,
+                backgroundColor: darkMode.darkMode
+                  ? Colors.White
+                  : Colors.Foreground,
               }}
               key={index}
             >
@@ -209,6 +215,9 @@ export const Knowledge = () => {
                 minHeight: 150,
                 minWidth: 150,
                 maxHeight: 150,
+                backgroundColor: darkMode.darkMode
+                  ? Colors.White
+                  : Colors.Foreground,
               }}
               key={index}
             >
