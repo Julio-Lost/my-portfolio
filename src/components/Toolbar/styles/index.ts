@@ -5,7 +5,15 @@ import { Colors } from "../../../constants";
 export const CustomToolbar = styled(Toolbar)<{ darkMode: boolean }>`
   background-color: ${(props) =>
     props.darkMode ? Colors.Background : Colors.White};
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const ContainerBotoes = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
 export const CustomTypography = styled(Typography)`
@@ -24,7 +32,12 @@ export const CustomToolbarText = styled.div`
   width: 100%;
 
   @media (min-width: 600px) {
-    margin-left: 8px;
+    margin-left: 12px;
     width: auto;
   }
+`;
+
+export const Img = styled.img`
+  width: 90px;
+  height: 90px;
 `;

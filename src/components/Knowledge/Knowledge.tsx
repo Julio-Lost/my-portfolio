@@ -91,10 +91,11 @@ export const Knowledge = () => {
       >
         <Typography
           style={{
-            fontSize: 18,
+            fontSize: 32,
             fontWeight: "bold",
             color: darkMode.darkMode ? Colors.White : Colors.Black,
             padding: 8,
+            fontFamily: "sans-serif",
           }}
         >
           Conhecimentos
@@ -122,13 +123,13 @@ export const Knowledge = () => {
               <CardContent style={{ textAlign: "center" }}>
                 <item.icone
                   style={{
-                    fontSize: 40,
+                    fontSize: 50,
                   }}
                   color={item.cor}
                 />
                 <Typography
                   style={{
-                    fontSize: 16,
+                    fontSize: 12,
                     fontWeight: "bold",
                     color: Colors.Black,
                     whiteSpace: "pre-line",
@@ -140,6 +141,7 @@ export const Knowledge = () => {
                   style={{
                     fontSize: 11,
                     color: Colors.Black,
+                    fontFamily: "fantasy",
                   }}
                   color="inherit"
                 >
@@ -166,7 +168,7 @@ export const Knowledge = () => {
               <CardContent style={{ textAlign: "center" }}>
                 <item.icone
                   style={{
-                    fontSize: 40,
+                    fontSize: 50,
                   }}
                   color={item.cor}
                 />
@@ -182,8 +184,9 @@ export const Knowledge = () => {
                 </Typography>
                 <Typography
                   style={{
-                    fontSize: 11,
+                    fontSize: 12,
                     color: Colors.Black,
+                    fontFamily: "fantasy",
                   }}
                   color="inherit"
                 >
@@ -210,7 +213,7 @@ export const Knowledge = () => {
               <CardContent style={{ textAlign: "center" }}>
                 <item.icone
                   style={{
-                    fontSize: 40,
+                    fontSize: 50,
                   }}
                   color={item.cor}
                 />
@@ -226,8 +229,9 @@ export const Knowledge = () => {
                 </Typography>
                 <Typography
                   style={{
-                    fontSize: 11,
+                    fontSize: 12,
                     color: Colors.Black,
+                    fontFamily: "fantasy",
                   }}
                   color="inherit"
                 >

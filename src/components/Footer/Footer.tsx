@@ -15,22 +15,15 @@ export const Footer = () => {
 
   return (
     <AppBar position="static">
-      <S.CustomToolbar
-        darkMode={darkMode.darkMode}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "row",
-        }}
-      >
+      <S.CustomToolbar darkMode={darkMode.darkMode}>
         <S.CustomToolbarText>
           <Link href="https://github.com/Julio-Lost">
             <VscGithub
               style={{
-                fontSize: 20,
+                fontSize: 24,
                 cursor: "pointer",
               }}
-              color={Colors.NewPurple}
+              color={Colors.White}
             />
           </Link>
         </S.CustomToolbarText>
@@ -38,10 +31,10 @@ export const Footer = () => {
           <Link href="https://github.com/Julio-Lost">
             <AiFillLinkedin
               style={{
-                fontSize: 20,
+                fontSize: 24,
                 cursor: "pointer",
               }}
-              color={Colors.NewPurple}
+              color={Colors.White}
             />
           </Link>
         </S.CustomToolbarText>
@@ -49,10 +42,10 @@ export const Footer = () => {
           <Link href="https://www.instagram.com/juliolost/">
             <AiFillInstagram
               style={{
-                fontSize: 20,
+                fontSize: 24,
                 cursor: "pointer",
               }}
-              color={Colors.NewPurple}
+              color={Colors.White}
             />
           </Link>
         </S.CustomToolbarText>
@@ -60,10 +53,10 @@ export const Footer = () => {
           <Link href="mailto:juliocesarmedeirosdev@gmail.com">
             <GrMail
               style={{
-                fontSize: 20,
+                fontSize: 24,
                 cursor: "pointer",
               }}
-              color={Colors.NewPurple}
+              color={Colors.White}
             />
           </Link>
         </S.CustomToolbarText>
@@ -71,10 +64,10 @@ export const Footer = () => {
           <Link href="https://t.me/juliocesardemedeiros">
             <FaTelegram
               style={{
-                fontSize: 20,
+                fontSize: 24,
                 cursor: "pointer",
               }}
-              color={Colors.NewPurple}
+              color={Colors.White}
             />
           </Link>
         </S.CustomToolbarText>

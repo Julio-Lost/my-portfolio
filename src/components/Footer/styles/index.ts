@@ -4,17 +4,17 @@ import { Colors } from "../../../constants";
 
 export const CustomToolbar = styled(Toolbar)<{ darkMode: boolean }>`
   background-color: ${(props) =>
-    props.darkMode ? Colors.Background : Colors.White};
+    props.darkMode ? Colors.Background : "#00c7ff"};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  @media (max-width: 550px) {
+    justify-content: space-around;
+  }
 `;
 
 export const CustomToolbarText = styled.div`
-  position: relative;
-  cursor: pointer;
-  margin-left: 0px;
-  width: 100%;
-
-  @media (min-width: 600px) {
-    margin-left: 8px;
-    width: auto;
-  }
+  padding: 0px 12px;
 `;

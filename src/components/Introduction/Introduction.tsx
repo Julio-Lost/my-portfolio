@@ -1,24 +1,31 @@
-import * as S from "./styles";
-import intro from "../../assets/intro.png";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import Lottie from "react-lottie";
+import IntroAnimation from "../../assets/intro.json";
 import { Colors } from "../../constants";
 import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
-
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
-import Link from "@material-ui/core/Link";
+import * as S from "./styles";
 
 export const Introduction = () => {
   const { state: darkMode } = useDarkModeContext();
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: IntroAnimation,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <S.CustomDiv darkMode={darkMode.darkMode}>
       <Grid container>
-        <Grid item md={6} lg={6}>
+        <S.ContainerText item md={6} lg={6}>
           <S.CustomDivText>
             <Typography
               style={{
-                fontSize: 16,
+                fontSize: 20,
                 color: darkMode.darkMode ? Colors.White : Colors.Black,
               }}
               color="inherit"
@@ -27,7 +34,7 @@ export const Introduction = () => {
             </Typography>
             <Typography
               style={{
-                fontSize: 18,
+                fontSize: 28,
                 fontWeight: "bold",
                 color: darkMode.darkMode ? Colors.White : Colors.Black,
                 paddingLeft: 4,
@@ -38,40 +45,42 @@ export const Introduction = () => {
             </Typography>
             <Typography
               style={{
-                fontSize: 16,
+                fontSize: 20,
                 color: darkMode.darkMode ? Colors.White : Colors.Black,
               }}
               color="inherit"
             >
               Desenvolvedor
             </Typography>
-            <Link
+            <S.LinkLikedin
               variant="subtitle1"
               href="https://www.linkedin.com/in/julio-cesar-de-medeiros/"
             >
-              <Button
-                variant="contained"
-                color="primary"
-                style={{ marginTop: 8, textTransform: "none" }}
-              >
+              <S.ButtonLinkedin variant="contained">
                 <Typography
                   color="inherit"
-                  style={{ marginRight: 4, fontSize: 11, fontWeight: "bold" }}
+                  style={{
+                    marginRight: 4,
+                    fontSize: 11,
+                    fontWeight: "bold",
+                    color: "#FFF",
+                  }}
                 >
                   In
                 </Typography>
-                <Typography color="inherit" style={{ fontSize: 15 }}>
+                <Typography
+                  color="inherit"
+                  style={{ fontSize: 15, color: "#FFF" }}
+                >
                   Linkedin
                 </Typography>
-              </Button>
-            </Link>
+              </S.ButtonLinkedin>
+            </S.LinkLikedin>
           </S.CustomDivText>
-        </Grid>
-        <Grid item md={6} lg={6}>
-          <div>
-            <S.CustomImg src={intro} alt="intro" />
-          </div>
-        </Grid>
+        </S.ContainerText>
+        <S.AnimationContainer item md={6} lg={6}>
+          <Lottie options={defaultOptions} height={400} width={400} />
+        </S.AnimationContainer>
       </Grid>
     </S.CustomDiv>
   );

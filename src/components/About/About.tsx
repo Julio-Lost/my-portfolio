@@ -12,16 +12,14 @@ export const About = () => {
     <S.CustomDiv darkMode={darkMode.darkMode}>
       <div />
       <Grid container>
-        <Grid item md={5}>
-          <S.CustomDivText>
-            <S.CustomImg src={me} alt="me" />
-          </S.CustomDivText>
-        </Grid>
-        <Grid item md={7}>
+        <S.CustomDivText item md={5}>
+          <S.CustomImg src={me} alt="me" darkMode={darkMode.darkMode} />
+        </S.CustomDivText>
+        <S.CustomDivAboutMe item md={7}>
           <S.CustomDivAboutMe>
             <Typography
               style={{
-                fontSize: 16,
+                fontSize: 32,
                 color: darkMode.darkMode ? Colors.White : Colors.Black,
                 fontWeight: "bold",
               }}
@@ -31,7 +29,7 @@ export const About = () => {
             </Typography>
             <Typography
               style={{
-                fontSize: 11,
+                fontSize: 18,
                 color: darkMode.darkMode ? Colors.White : Colors.Black,
               }}
               color="inherit"
@@ -44,7 +42,7 @@ export const About = () => {
             </Typography>
             <Typography
               style={{
-                fontSize: 11,
+                fontSize: 18,
                 color: darkMode.darkMode ? Colors.White : Colors.Black,
               }}
               color="inherit"
@@ -53,7 +51,7 @@ export const About = () => {
               paixão por aprender e compartilhar meu conhecimento com os outros.
             </Typography>
           </S.CustomDivAboutMe>
-        </Grid>
+        </S.CustomDivAboutMe>
       </Grid>
     </S.CustomDiv>
   );
