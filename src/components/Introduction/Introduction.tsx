@@ -37,7 +37,6 @@ export const Introduction = () => {
                 fontSize: 28,
                 fontWeight: "bold",
                 color: darkMode.darkMode ? Colors.White : Colors.Black,
-                paddingLeft: 4,
               }}
               color="inherit"
             >
@@ -50,7 +49,7 @@ export const Introduction = () => {
               }}
               color="inherit"
             >
-              Desenvolvedor
+              Desenvolvedor Full Stack
             </Typography>
             <S.LinkLikedin
               variant="subtitle1"

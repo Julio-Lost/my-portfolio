@@ -42,7 +42,6 @@ export const CustomDivAboutMe = styled(Grid)`
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  width: 100%;
   padding: 30px;
 
   @media (max-width: 959px) {

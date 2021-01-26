@@ -16,6 +16,7 @@ import * as S from "./styles";
 
 const App = () => {
   const { dispatch, actions } = useDarkModeContext();
+  const introductionRef = useRef<HTMLDivElement | null>(null);
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const knowledgeRef = useRef<HTMLDivElement | null>(null);
@@ -42,6 +43,10 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleScrollToIntroductionRef = () => {
+    introductionRef.current!.scrollIntoView();
+  };
+
   const handleScrollToAbouRef = () => {
     aboutRef.current!.scrollIntoView();
   };
@@ -63,13 +68,16 @@ const App = () => {
       <Toolbar
         handleLightMode={handleLightMode}
         handleDarkMode={handleDarkMode}
+        handleScrollIntroduction={handleScrollToIntroductionRef}
         handleScrollAbout={handleScrollToAbouRef}
         handleScrollProjects={handleScrollToProjectsRef}
         handleScrollKnowLedge={handleScrollToKnowLedgeRef}
         handleScrollFooter={handleScrollToFooterRef}
       />
       <Paper>
-        <Introduction />
+        <div ref={introductionRef}>
+          <Introduction />
+        </div>
         <div ref={aboutRef}>
           <About />
         </div>

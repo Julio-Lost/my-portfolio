@@ -56,6 +56,10 @@ export const Projects = () => {
             backgroundColor: darkMode.darkMode
               ? Colors.Background
               : Colors.NewWhite,
+            maxHeight: 300,
+            maxWidth: 400,
+            cursor: "pointer",
+            paddingTop: 30,
           }}
         >
           <CardContent style={{ textAlign: "center" }}>

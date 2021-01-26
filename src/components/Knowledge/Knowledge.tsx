@@ -124,12 +124,13 @@ export const Knowledge = () => {
                 <item.icone
                   style={{
                     fontSize: 50,
+                    paddingBottom: 6,
                   }}
                   color={item.cor}
                 />
                 <Typography
                   style={{
-                    fontSize: 12,
+                    fontSize: 16,
                     fontWeight: "bold",
                     color: Colors.Black,
                     whiteSpace: "pre-line",
@@ -139,7 +140,7 @@ export const Knowledge = () => {
                 </Typography>
                 <Typography
                   style={{
-                    fontSize: 11,
+                    fontSize: 12,
                     color: Colors.Black,
                     fontFamily: "fantasy",
                   }}
@@ -169,6 +170,7 @@ export const Knowledge = () => {
                 <item.icone
                   style={{
                     fontSize: 50,
+                    paddingBottom: 6,
                   }}
                   color={item.cor}
                 />
@@ -214,6 +216,7 @@ export const Knowledge = () => {
                 <item.icone
                   style={{
                     fontSize: 50,
+                    paddingBottom: 6,
                   }}
                   color={item.cor}
                 />

@@ -6,10 +6,11 @@ import Lottie from "react-lottie";
 import AppBar from "@material-ui/core/AppBar";
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
 import LogoAnimation from "../../assets/logo.json";
-import LogoDarkAnimation from "../../assets/logoDark.json";
+import LogoDarkAnimation from "../../assets/logo.json";
 interface IToolbarProps {
   handleLightMode: () => void;
   handleDarkMode: () => void;
+  handleScrollIntroduction: () => void;
   handleScrollAbout: () => void;
   handleScrollProjects: () => void;
   handleScrollKnowLedge: () => void;
@@ -18,7 +19,6 @@ interface IToolbarProps {
 
 export const Toolbar = (props: IToolbarProps) => {
   const { state: darkMode } = useDarkModeContext();
-
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -39,7 +39,22 @@ export const Toolbar = (props: IToolbarProps) => {
             style={{ borderRadius: 50 }}
           />
         </div>
+
         <S.ContainerBotoes>
+          <S.CustomToolbarText>
+            <S.CustomTypography
+              onClick={props.handleScrollIntroduction}
+              style={{
+                fontSize: 16,
+                fontWeight: "bold",
+                color: darkMode.darkMode ? Colors.White : Colors.Black,
+                cursor: "pointer",
+              }}
+              noWrap
+            >
+              Introdução
+            </S.CustomTypography>
+          </S.CustomToolbarText>
           <S.CustomToolbarText>
             <S.CustomTypography
               onClick={props.handleScrollAbout}

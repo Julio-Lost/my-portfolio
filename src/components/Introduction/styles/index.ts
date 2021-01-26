@@ -49,10 +49,10 @@ export const ButtonLinkedin = styled(Button)`
     margin-top: 8px;
     margin-bottom: 15px;
     text-transform: none;
-    background-color: #00c7ff;
+    background-color: #33847c;
 
     &:hover {
-      background-color: #04acdc;
+      background-color: #50b9a6;
       text-transform: none;
     }
   }
