@@ -11,7 +11,7 @@ export const Projects = () => {
   const { state: darkMode } = useDarkModeContext();
 
   const navigate = () =>
-    (window.location.href = "https://github.com/vbbarbosa97");
+    (window.location.href = "https://github.com/Julio-Lost");
   const defaultOptions = {
     loop: true,
     autoplay: true,
