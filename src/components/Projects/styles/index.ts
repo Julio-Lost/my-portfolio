@@ -10,8 +10,8 @@ export const CustomDiv = styled.div<{ darkMode: boolean }>`
 `;
 
 export const CustomCard = styled(Card)<{ darkMode: boolean }>`
-  background-color: ${(props) =>
-    props.darkMode ? Colors.Purple : Colors.NewWhite};
-  max-width: 300;
-  max-height: 500;
+  max-width: 400px;
+  max-height: 300px;
+  cursor: pointer;
+  padding-top: 30px;
 `;

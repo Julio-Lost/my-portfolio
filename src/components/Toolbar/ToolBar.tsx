@@ -29,7 +29,7 @@ export const Toolbar = (props: IToolbarProps) => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <S.CustomToolbar darkMode={darkMode.darkMode}>
         <div>
           <Lottie

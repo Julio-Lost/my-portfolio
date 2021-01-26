@@ -50,20 +50,19 @@ export const Projects = () => {
       >
         <S.CustomCard
           darkMode={darkMode.darkMode}
-          style={{
-            maxHeight: 300,
-            maxWidth: 400,
-            cursor: "pointer",
-            paddingTop: 30,
-          }}
           elevation={10}
           onClick={navigate}
+          style={{
+            backgroundColor: darkMode.darkMode
+              ? Colors.Background
+              : Colors.NewWhite,
+          }}
         >
           <CardContent style={{ textAlign: "center" }}>
             <Typography
               style={{
                 fontSize: 16,
-                color: Colors.Black,
+                color: darkMode.darkMode ? Colors.White : Colors.Black,
                 fontWeight: 700,
               }}
               color="inherit"
