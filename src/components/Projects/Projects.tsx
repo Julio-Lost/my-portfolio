@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import React from "react";
 import Lottie from "react-lottie";
 import GithubAnimation from "../../assets/github.json";
+import GithubLightAnimation from "../../assets/githubLight.json";
 import { Colors } from "../../constants";
 import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
 import * as S from "./styles";
@@ -15,7 +16,7 @@ export const Projects = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: GithubAnimation,
+    animationData: darkMode.darkMode ? GithubAnimation : GithubLightAnimation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
