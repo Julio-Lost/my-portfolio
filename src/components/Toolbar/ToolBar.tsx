@@ -6,7 +6,7 @@ import Lottie from "react-lottie";
 import AppBar from "@material-ui/core/AppBar";
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
 import LogoAnimation from "../../assets/logo.json";
-import LogoDarkAnimation from "../../assets/logo.json";
+import LogoDarkAnimation from "../../assets/logoDark.json";
 interface IToolbarProps {
   handleLightMode: () => void;
   handleDarkMode: () => void;
