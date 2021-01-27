@@ -43,6 +43,7 @@ export const CustomDivAboutMe = styled(Grid)`
   justify-content: center;
   height: 100vh;
   padding: 30px;
+  width: 100%;
 
   @media (max-width: 959px) {
     height: 60vh;
