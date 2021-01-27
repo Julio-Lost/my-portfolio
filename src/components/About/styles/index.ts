@@ -4,7 +4,7 @@ import { Colors } from "../../../constants";
 
 export const CustomDiv = styled.div<{ darkMode: boolean }>`
   background-color: ${(props) =>
-    props.darkMode ? Colors.Background : Colors.NewWhite};
+    props.darkMode ? Colors.Background : Colors.White};
 
   padding-top: 12vh;
   height: 100vh;
@@ -29,7 +29,7 @@ export const CustomImg = styled.img<{ darkMode: boolean }>`
   border-radius: 50%;
   border: 8px solid #00c7ff;
   border: ${(props) =>
-    props.darkMode ? "8px solid #fff;" : "8px solid #00c7ff"};
+    props.darkMode ? "8px solid #fff;" : "8px solid #72E0FE"};
 
   @media (max-width: 514px) {
     width: 150px;

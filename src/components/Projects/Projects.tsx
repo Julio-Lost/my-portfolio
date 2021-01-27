@@ -56,7 +56,7 @@ export const Projects = () => {
           style={{
             backgroundColor: darkMode.darkMode
               ? Colors.Background
-              : Colors.NewWhite,
+              : Colors.White,
             maxHeight: 300,
             maxWidth: 400,
             cursor: "pointer",

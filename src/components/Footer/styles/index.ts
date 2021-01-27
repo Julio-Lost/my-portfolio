@@ -4,7 +4,7 @@ import { Colors } from "../../../constants";
 
 export const CustomToolbar = styled(Toolbar)<{ darkMode: boolean }>`
   background-color: ${(props) =>
-    props.darkMode ? Colors.Background : "#00c7ff"};
+    props.darkMode ? Colors.Background : "#56dafe"};
   display: flex;
   justify-content: center;
   align-items: center;

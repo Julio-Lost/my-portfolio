@@ -21,7 +21,7 @@ export const About = () => {
           <Typography
             style={{
               fontSize: 32,
-              color: darkMode.darkMode ? Colors.White : "#2d4159",
+              color: darkMode.darkMode ? Colors.White : Colors.Black,
               fontWeight: "bold",
               marginBottom: 15,
             }}

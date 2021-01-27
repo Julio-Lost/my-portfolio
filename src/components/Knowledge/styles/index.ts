@@ -19,7 +19,7 @@ const rotateCenter = keyframes`
 
 export const CustomDiv = styled.div<{ darkMode: boolean }>`
   background-color: ${(props) =>
-    props.darkMode ? Colors.Selection : Colors.White};
+    props.darkMode ? Colors.Selection : "#E3F9FF"};
   padding-top: 12vh;
   height: auto;
   padding-bottom: 24px;
