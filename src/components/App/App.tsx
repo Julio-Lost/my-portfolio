@@ -8,17 +8,16 @@ import {
 import { useDarkModeContext } from "../../context/reducers/darkMode/darkModeContext";
 import { DarkModeActions } from "../../context/types/darkMode.types";
 import LinearProgress from "@material-ui/core/LinearProgress";
-
 import * as S from "./styles";
 
-const App = () => {
-  const About = React.lazy(() => import("../About/About"));
-  const Footer = React.lazy(() => import("../Footer/Footer"));
-  const Introduction = React.lazy(() => import("../Introduction/Introduction"));
-  const Knowledge = React.lazy(() => import("../Knowledge/Knowledge"));
-  const Projects = React.lazy(() => import("../Projects/Projects"));
-  const Toolbar = React.lazy(() => import("../Toolbar/ToolBar"));
+const About = React.lazy(() => import("../About/About"));
+const Footer = React.lazy(() => import("../Footer/Footer"));
+const Introduction = React.lazy(() => import("../Introduction/Introduction"));
+const Knowledge = React.lazy(() => import("../Knowledge/Knowledge"));
+const Projects = React.lazy(() => import("../Projects/Projects"));
+const Toolbar = React.lazy(() => import("../Toolbar/ToolBar"));
 
+const App = () => {
   const { dispatch, actions } = useDarkModeContext();
   const introductionRef = useRef<HTMLDivElement | null>(null);
   const aboutRef = useRef<HTMLDivElement | null>(null);
