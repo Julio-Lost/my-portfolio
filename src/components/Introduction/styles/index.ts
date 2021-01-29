@@ -1,4 +1,4 @@
-import { Button, Grid, Link } from "@material-ui/core";
+import { Button, Grid, Link, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import { Colors } from "../../../constants";
 
@@ -61,5 +61,13 @@ export const ButtonLinkedin = styled(Button)`
 export const LinkLikedin = styled(Link)`
   &.MuiLink-underlineHover:hover {
     text-decoration: none;
+  }
+`;
+
+export const CustomTextIntroduction = styled(Typography)`
+  font-size: 28px;
+
+  @media (max-width: 569px) {
+    font-size: 23px;
   }
 `;

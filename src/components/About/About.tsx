@@ -15,7 +15,13 @@ export const About = () => {
     <S.CustomDiv darkMode={darkMode.darkMode}>
       <Grid container>
         <S.CustomDivText item md={5}>
-          <S.CustomImg src={me} alt="me" darkMode={darkMode.darkMode} />
+          <S.CustomImg
+            src={me}
+            alt="me"
+            darkMode={darkMode.darkMode}
+            width={200}
+            height={200}
+          />
         </S.CustomDivText>
         <S.CustomDivAboutMe item md={7}>
           <Typography
@@ -29,9 +35,8 @@ export const About = () => {
           >
             Sobre mim
           </Typography>
-          <Typography
+          <S.CustomTextAboutMe
             style={{
-              fontSize: 18,
               color: darkMode.darkMode ? Colors.White : Colors.Black,
             }}
             color="inherit"
@@ -41,17 +46,16 @@ export const About = () => {
             atualmente na cidade de Vila Velha - ES. Estou cursando Análise e
             Desenvolvimento de Sistemas pela Universidade de Vila Velha,
             UVV/Vila Velha.
-          </Typography>
-          <Typography
+          </S.CustomTextAboutMe>
+          <S.CustomTextAboutMe
             style={{
-              fontSize: 18,
               color: darkMode.darkMode ? Colors.White : Colors.Black,
             }}
             color="inherit"
           >
             Eu sou um dev procurando resolver problemas do mundo real. Tenho
             paixão por aprender e compartilhar meu conhecimento com os outros.
-          </Typography>
+          </S.CustomTextAboutMe>
         </S.CustomDivAboutMe>
       </Grid>
     </S.CustomDiv>

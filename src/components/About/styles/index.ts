@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import { Colors } from "../../../constants";
 
@@ -24,8 +24,6 @@ export const CustomDivText = styled(Grid)`
 `;
 
 export const CustomImg = styled.img<{ darkMode: boolean }>`
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
   border: 8px solid #00c7ff;
   border: ${(props) =>
@@ -47,5 +45,13 @@ export const CustomDivAboutMe = styled(Grid)`
 
   @media (max-width: 959px) {
     height: 60vh;
+  }
+`;
+
+export const CustomTextAboutMe = styled(Typography)`
+  font-size: 18px;
+
+  @media (max-width: 569px) {
+    font-size: 14px;
   }
 `;

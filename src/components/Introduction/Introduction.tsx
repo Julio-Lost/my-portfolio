@@ -32,16 +32,15 @@ export const Introduction = () => {
             >
               Olá, eu sou
             </Typography>
-            <Typography
+            <S.CustomTextIntroduction
               style={{
-                fontSize: 28,
                 fontWeight: "bold",
                 color: darkMode.darkMode ? Colors.White : Colors.Black,
               }}
               color="inherit"
             >
               Julio Cesar de Medeiros.
-            </Typography>
+            </S.CustomTextIntroduction>
             <Typography
               style={{
                 fontSize: 20,
