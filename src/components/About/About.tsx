@@ -9,7 +9,7 @@ import * as S from "./styles";
 export const About = () => {
   const { state: darkMode } = useDarkModeContext();
   const anoAtual = new Date().getFullYear();
-  const idade = anoAtual - 1997;
+  const idade = anoAtual - 1994;
 
   return (
     <S.CustomDiv darkMode={darkMode.darkMode}>
